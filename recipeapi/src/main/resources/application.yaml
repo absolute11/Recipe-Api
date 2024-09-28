@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: recipeapi
+
+
+
+
+
+  config:
+    import: optional:file:.env[.properties]
+
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: recipeDB
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+  cache:
+    type: redis
+
+graphql:
+  graphiql:
+    enabled: true
+
+
+
+
+
+server:
+  port: 8080
+
+search:
+  url:
+    template: ${SEARCH_URL_TEMPLATE}

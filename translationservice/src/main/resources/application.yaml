@@ -1,0 +1,24 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+
+
+yandex:
+  iam:
+    token: ${IAM_TOKEN}
+  folder:
+    id: ${FOLDER_ID}
+  api:
+    url: ${API_URL}
+
+
+
+server:
+  port: 8081

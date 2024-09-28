@@ -1,0 +1,32 @@
+type NutritionFact {
+    key: String
+    value: String
+}
+
+type Recipe {
+    title: String
+    description: String
+    ingredients: [String]
+    steps: [String]
+    nutritionFacts: [NutritionFact]
+    category: String
+}
+
+input NutritionFactInput {
+    key: String!
+    value: String!
+}
+
+input RecipeInput {
+    title: String!
+    description: String
+    ingredients: [String!]!
+    steps: [String!]!
+    nutritionFacts: [NutritionFactInput!]!
+    category: String
+}
+type RecipeTitle {
+    title: String
+    category: String
+    url: String
+}

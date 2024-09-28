@@ -1,0 +1,10 @@
+type Query {
+    recipesByName(dishName: String!): [RecipeTitle]
+    recipeByUrl(url: String!): Recipe
+    getAllFavoriteRecipes: [Recipe]
+}
+
+type Mutation {
+    saveRecipe(dto: RecipeInput!): Recipe
+    deleteRecipe(id: ID!): Boolean
+}
